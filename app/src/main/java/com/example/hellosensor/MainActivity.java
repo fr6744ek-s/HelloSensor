@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
+    public void accelerometers(View view) {
+        Intent intent = new Intent(this, AccelerometerActivity.class);
+        this.startActivity(intent);
+    }
 }
