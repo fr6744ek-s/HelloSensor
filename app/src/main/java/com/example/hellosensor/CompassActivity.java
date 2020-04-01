@@ -39,8 +39,6 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         compass_image = (ImageView) findViewById(R.id.compass_image);
         txt_azimuth = (TextView) findViewById(R.id.azimuth);
-
-        start();
     }
 
     @Override
@@ -139,9 +137,9 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         if (haveSensor) {
             sensorManager.unregisterListener(this, rotationV);
         }
-        else {
-            sensorManager.unregisterListener(this, accelerometer);
+        if (haveSensor2) {
             sensorManager.unregisterListener(this, magnetometer);
+            sensorManager.unregisterListener(this, accelerometer);
         }
     }
 
