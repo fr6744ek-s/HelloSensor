@@ -30,4 +30,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AccelerometerActivity.class);
         this.startActivity(intent);
     }
+
+    public void compass(View view) {
+        Intent intent = new Intent(this, CompassActivity.class);
+        this.startActivity(intent);
+    }
 }
