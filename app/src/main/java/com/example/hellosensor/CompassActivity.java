@@ -1,13 +1,16 @@
 package com.example.hellosensor;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.VibrationEffect;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.os.Vibrator;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -94,6 +97,10 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         if (azimuth <= 80 && azimuth > 10)
             where = "NE";
 
+        if (345 <= azimuth || azimuth <= 15) {
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE));
+        }
 
         txt_azimuth.setText(azimuth + "° " + where);
     }
