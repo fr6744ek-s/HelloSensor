@@ -22,7 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Azimuth:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#0F444E"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#0F444E"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/heading"
         app:layout_constraintTop_toTopOf="parent" />
