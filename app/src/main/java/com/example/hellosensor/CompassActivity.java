@@ -6,6 +6,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.widget.ImageView;
@@ -98,6 +99,8 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         if (345 <= azimuth || azimuth <= 15) {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE));
+            MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.beep);
+            mediaPlayer.start();
         }
 
         txt_azimuth.setText(azimuth + "° " + where);

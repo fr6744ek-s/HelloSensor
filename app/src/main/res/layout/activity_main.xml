@@ -37,7 +37,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Choose a sensor:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#0F444E"
+        android:textColor="#011657"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

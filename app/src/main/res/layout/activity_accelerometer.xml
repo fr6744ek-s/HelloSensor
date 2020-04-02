@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Accelerometer values:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#0F444E"
+        android:textColor="#011657"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -85,4 +85,14 @@
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/y_value" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/accelerometer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
